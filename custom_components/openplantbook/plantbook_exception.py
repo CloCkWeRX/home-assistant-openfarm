@@ -1,2 +1,2 @@
-class OpenPlantbookException(Exception):
+class OpenFarmException(Exception):
     pass

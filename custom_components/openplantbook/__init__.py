@@ -62,7 +62,7 @@ from .uploader import (
     plant_data_upload,
 )
 
-from .plantbook_exception import OpenPlantbookException
+from .plantbook_exception import OpenFarmException
 
 CONFIG_SCHEMA = vol.Schema({DOMAIN: vol.Schema({})}, extra=vol.ALLOW_EXTRA)
 _LOGGER = logging.getLogger(__name__)
