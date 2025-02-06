@@ -1,4 +1,4 @@
-"""Config flow for OpenPlantBook integration."""
+"""Config flow for OpenFarm integration."""
 
 from __future__ import annotations
 
@@ -64,10 +64,10 @@ async def validate_input(hass: core.HomeAssistant, data):
         _LOGGER.debug("API client_id and/or client secret are invalid: %s", ex)
         raise ValueError
     except Exception as ex:
-        _LOGGER.error("Unable to connect to OpenPlantbook: %s", ex)
+        _LOGGER.error("Unable to connect to OpenFarm: %s", ex)
         raise
 
-    return {TITLE: "Openplantbook API"}
+    return {TITLE: "OpenFarm API"}
 
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
@@ -118,7 +118,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         if user_input is not None:
             # self.options=user_input
             return self.async_create_entry(
-                title="Openplantbook API", data=self.data, options=user_input
+                title="OpenFarm API", data=self.data, options=user_input
             )
 
         return self.async_show_form(
