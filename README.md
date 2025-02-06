@@ -1,12 +1,11 @@
-# OpenPlantbook integration for Home Assistant
+# OpenFarm integration for Home Assistant
 
-This integration allows fetching plants information from and uploading plant sensors' data to OpenPlantBook.
-It creates a few service calls in Home Assistant to interact with [OpenPlantbook API](https://open.plantbook.io/) which
+This integration allows fetching plants information from OpenFarm.
+It creates a few service calls in Home Assistant to interact with [OpenFarm API](https://github.com/openfarmcc/OpenFarm/wiki) which
 are:
 
 * Search plant
 * Get plant details
-* Upload plants sensors data
 
 This is used as a base for the sister-integration https://github.com/Olen/homeassistant-plant which utilizes this API to
 add threshold values for such as moisture, temperature, conductivity etc. based on the plant species.
@@ -24,13 +23,13 @@ This can be installed manually or through HACS
     * Click Integrations
     * Click the 3 dots in the top right corner and select "Custom Repositories"
     * Add the URL to this GitHub repository and category "Integration"
-* Click "Install" in the new "OpenPlantbook" card in HACS.
+* Click "Install" in the new "OpenFarm" card in HACS.
 * Wait for install to complete
 * Restart Home Assistant
 
 ### Manual Installation
 
-* Copy the whole`custom_components/openplantbook/` directory to your server's `<config>/custom_components` directory
+* Copy the whole`custom_components/openfarm` directory to your server's `<config>/custom_components` directory
 * Restart Home Assistant
 
 ## Set up
