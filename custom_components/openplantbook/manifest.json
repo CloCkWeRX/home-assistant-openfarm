@@ -1,19 +1,19 @@
 {
-  "domain": "openplantbook",
-  "name": "OpenPlantbook",
+  "domain": "openfarm",
+  "name": "OpenFarm",
   "codeowners": [
-    "@Olen"
+    "@CloCkWeRX"
   ],
   "config_flow": true,
   "dependencies": [
     "history",
     "recorder"
   ],
-  "documentation": "https://github.com/Olen/home-assistant-openplantbook/",
+  "documentation": "https://github.com/CloCkWeRX/home-assistant-openfarm/",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/Olen/home-assistant-openplantbook/issues",
+  "issue_tracker": "https://github.com/CloCkWeRX/home-assistant-openfarmk/issues",
   "loggers": [
-    "openplantbook_sdk"
+    "openfarm_sdk"
   ],
   "requirements": [
     "json-timeseries==0.1.7",
