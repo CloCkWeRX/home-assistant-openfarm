@@ -1,7 +1,7 @@
-"""Constants for the openplantbook integration."""
+"""Constants for the openfarm integration."""
 
-DOMAIN = "openplantbook"
-PLANTBOOK_BASEURL = "https://open.plantbook.io/api/v1"
+DOMAIN = "openfarm"
+OPENFARM_BASEURL = "https://openfarm.cc/api/v1/"
 ATTR_ALIAS = "alias"
 ATTR_PLANT_INSTANCE = "plant_instance"
 ATTR_SPECIES = "species"
