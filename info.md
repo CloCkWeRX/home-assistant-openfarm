@@ -1,3 +1,3 @@
-# OpenPlantbook
+# OpenFarm
 
-Integration between Home-Assistant and OpenPlantbook.io
+Integration between Home-Assistant and OpenFarm.cc

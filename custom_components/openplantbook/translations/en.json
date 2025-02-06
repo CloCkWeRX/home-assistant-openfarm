@@ -11,11 +11,11 @@
         "step": {
             "upload": {
                 "data": {
-                    "upload_data": "Anonymously upload plant-sensors' data to OpenPlantbook",
+                    "upload_data": "Anonymously upload plant-sensors' data to Openfarm",
                     "upload_data_hass_location_coordinates": "Share a location COORDINATES from Home-Assistant configuration",
                     "upload_data_hass_location_country": "Share a location COUNTRY from Home-Assistant configuration"
                 },
-                "description": "Upload Plant-sensors data to OpenPlantbook. Please consider enabling it to contribute to a creation of a Worldwide Browsable dataset. More info: https://open.plantbook.io/ui/sensor-data/",
+                "description": "Upload Plant-sensors data to Openfarm. Please consider enabling it to contribute to a creation of a Worldwide Browsable dataset. More info: https://open.plantbook.io/ui/sensor-data/",
                 "title": "Plant-sensors data uploading"
             },
             "user": {

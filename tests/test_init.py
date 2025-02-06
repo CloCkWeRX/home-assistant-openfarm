@@ -1,7 +1,7 @@
 # # """Test component setup."""
 # from homeassistant.setup import async_setup_component
 #
-# from custom_components.openplantbook.const import DOMAIN
+# from custom_components.openfarm.const import DOMAIN
 #
 #
 # async def test_async_setup(hass):
@@ -12,7 +12,7 @@
 
 import pytest
 from unittest.mock import Mock
-from custom_components.openplantbook.uploader import get_supported_state_value
+from custom_components.openfarm.uploader import get_supported_state_value
 
 
 @pytest.mark.parametrize(

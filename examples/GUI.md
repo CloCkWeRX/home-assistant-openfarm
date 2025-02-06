@@ -35,46 +35,46 @@ These automations trigger when the different helpers are modified.
 Initiate a search when the input_text helper is modified
 
 ```
-alias: Search Openplantbook
+alias: Search Openfarm
 trigger:
   - platform: state
-    entity_id: input_text.openplantbook_search
+    entity_id: input_textopenfarm_search
 action:
-  - service: openplantbook.search
+  - service: openfarm.search
     data:
-      alias: "{{ states('input_text.openplantbook_search') }}"
+      alias: "{{ states('input_text.openfarm_search') }}"
 
 ```
 
 Populate the input_select when a search result is ready
 
 ```
-alias: Populate Openplantbook Dropdown
+alias: Populate Openfarm Dropdown
 trigger:
   - platform: state
-    entity_id: openplantbook.search_result
+    entity_id: openfarm.search_result
 action:
   - service: input_select.set_options
     data:
-      entity_id: input_select.openplantbook_searchresults
+      entity_id: input_select.openfarm_searchresults
       options: |
-        {% if states('openplantbook.search_result') | int(default=0) > 0 %}
-          {{ states.openplantbook.search_result.attributes | list }}
+        {% if states('openfarm.search_result') | int(default=0) > 0 %}
+          {{ states.openfarm.search_result.attributes | list }}
         {% else %}
           [ "No plants found"]
         {% endif %}
 
 ```
 
-Get details from OPB when an option in the dropdown is selected
+Get details from Openfarm when an option in the dropdown is selected
 
 ```
-alias: Get Info From Openplantbook
+alias: Get Info From Openfarm
 trigger:
   - platform: state
     entity_id: input_select.openplantbook_searchresults
 action:
-  - service: openplantbook.get
+  - service: openfarm.get
     data:
       species: "{{ states('input_select.openplantbook_searchresults') }}"
 
@@ -84,13 +84,13 @@ Clear the cache when the button is pressed
 
 ```
 
-alias: Clear Openplantbook cache
+alias: Clear Openfarm cache
 trigger:
   - platform: state
     entity_id:
-      - input_button.openplantbook_clear_cache
+      - input_button.openfarm_clear_cache
 action:
-  - service: openplantbook.clean_cache
+  - service: openfarm.clean_cache
     data:
       hours: 0
 ```
@@ -103,12 +103,12 @@ I use two cards.  One for the search and search results, and one to display the 
 
 ```
 type: entities
-title: Search OpenPlantbook
+title: Search Openfarm
 entities:
-  - entity: input_text.openplantbook_search
-  - entity: openplantbook.search_result
-  - entity: input_select.openplantbook_searchresults
-  - entity: input_button.openplantbook_clear_cache
+  - entity: input_text.openfarm_search
+  - entity: openfarm.search_result
+  - entity: input_select.openfarm_searchresults
+  - entity: input_button.openfarm_clear_cache
 ```
 
 ```
@@ -116,7 +116,7 @@ type: markdown
 title: Plant info
 content: |
 
-  {% set plant = "openplantbook." + states('input_select.openplantbook_searchresults') | replace(" ", "_") | replace("'", "") | replace(".", "") %}
+  {% set plant = "openfarm." + states('input_select.openplantbook_searchresults') | replace(" ", "_") | replace("'", "") | replace(".", "") %}
   {% if states(plant) == "unknown" %}
   # Search for a plant
   {% else %}

@@ -71,7 +71,7 @@ async def validate_input(hass: core.HomeAssistant, data):
 
 
 class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
-    """Handle a config flow for OpenPlantBook."""
+    """Handle a config flow for OpenFarm."""
 
     VERSION = 1
     CONNECTION_CLASS = config_entries.CONN_CLASS_UNKNOWN
