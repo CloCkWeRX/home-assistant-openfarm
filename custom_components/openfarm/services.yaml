@@ -1,6 +1,6 @@
 search:
   name: Search
-  description: Searches Openplantbook for a plant
+  description: Searches Openfarm for a plant
   fields:
     alias:
       name: Search for
@@ -36,7 +36,7 @@ upload:
 
 clean_cache:
   name: Clean Cache
-  description: Clean up the cached entries from Openplantbook
+  description: Clean up the cached entries from Openfarm
   fields:
     hours:
       name: Hours
